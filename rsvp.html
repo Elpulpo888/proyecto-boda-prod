@@ -106,5 +106,46 @@
     </nav>
   </footer>
 
+<script>
+  const form = document.getElementById('rsvp-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // ⛔ evita que se vaya al JSON
+
+    status.textContent = 'Enviando...';
+    status.style.color = '#6f6f6f';
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        form.reset(); // 🧼 limpia el formulario
+        status.textContent = 'Gracias por confirmar tu asistencia 💛';
+        status.style.color = '#1f1f1f';
+      } else {
+        status.textContent = result.message || 'Ocurrió un error. Intenta de nuevo.';
+        status.style.color = 'crimson';
+      }
+
+    } catch (error) {
+      status.textContent = 'Error de conexión. Intenta más tarde.';
+      status.style.color = 'crimson';
+    }
+  });
+</script>
+
+
 </body>
 </html>
