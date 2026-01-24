@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmar asistencia</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="hamburger" onclick="document.querySelector('.nav-left').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav-left">
+      <a href="index.html">Inicio</a>
+      <a href="codigo-vestimenta.html">Código de Vestimenta</a>
+      <a href="regalos.html">Regalos</a>
+      <a href="rsvp.html" class="btn-dark mobile-cta">Confirmar asistencia</a>
+    </nav>
+
+    <div class="nav-center">Celebrando nuestro amor</div>
+
+    <div class="nav-right">
+      <a href="rsvp.html" class="btn-dark">Confirmar asistencia</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="min-height: 60vh;">
+    <p class="eyebrow">Te esperamos</p>
+    <h1>Confirma tu asistencia</h1>
+  </section>
+
+  <!-- FORMULARIO RSVP -->
+  <section class="split-section" style="grid-template-columns: 1fr; justify-items: center;">
+    <div class="content" style="max-width: 500px; margin: 0 auto; text-align: center;">
+      <h2>RSVP</h2>
+      <p>Por favor confirma tu asistencia antes de la fecha indicada.</p>
+
+      <form id="rsvp-form" method="POST" action="/api/rsvp">
+
+
+        <!-- Honeypot -->
+        <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none;">
+
+        <div style="margin-top: 2rem; text-align: left;">
+          <label>Nombre completo</label>
+          <input type="text" name="name" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: left;">
+          <label>Correo electrónico</label>
+          <input type="email" name="email" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: left;">
+          <label>¿Asistirás a la boda?</label>
+          <select name="attendance" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
+            <option value="">Selecciona una opción</option>
+            <option value="si">Sí, asistiré</option>
+            <option value="no">No podré asistir</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: left;">
+          <label>Número de asistentes</label>
+          <select name="guests" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: left;">
+          <label>Mensaje (opcional)</label>
+          <textarea name="message" rows="4" style="width:100%; padding:0.7rem; margin-top:0.4rem;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-dark" style="margin-top:2.5rem; width:100%;">
+          Enviar confirmación
+        </button>
+
+        <p id="form-status" style="margin-top:1rem; font-size:0.9rem;"></p>
+
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <nav>
+      <a href="index.html">Ceremonia y Celebración</a>
+      <a href="codigo-vestimenta.html">Código de Vestimenta</a>
+      <a href="regalos.html">Regalos</a>
+      <a href="rsvp.html">Confirmar asistencia</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
