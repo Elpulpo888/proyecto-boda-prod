@@ -94,6 +94,8 @@
     ====================== */
     section { padding: 5rem 2rem; }
 
+    /* HERO */
+
     .hero {
       display: flex;
       flex-direction: column;
@@ -106,14 +108,56 @@
       overflow: hidden;
     }
 
+    /* HERO-HOME */
+
     .hero--home {
       min-height: 90vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('../images/hero.jpg') center / cover no-repeat;
+      padding: 2rem;
     }
 
-  
+    .hero--home::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('../images/hero-desktop.jpg') center / cover no-repeat;
+
+      z-index: 0;
+      margin: 0 0 1rem 0;
+    }
+
+    .hero--home > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HERO-RESVP*/
+
+    .hero--rsvp {
+      min-height: 90vh;
+      padding: 2rem;
+    }
+
+    .hero--rsvp::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('../images/playa-desktop.jpg') center / cover no-repeat;
+
+      z-index: 0;
+      margin: 0 0 1rem 0;
+    }
+
+    .hero--rsvp > * {
+      position: relative;
+      z-index: 1;
+    }
+
 
 
     .hero h1 {
@@ -121,12 +165,16 @@
       font-size: clamp(2.5rem, 5vw, 4rem);
     }
 
+    /* Sections */
+
     .split-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
       align-items: center;
       text-align: center;
+      padding: 1rem; /* menos espacio vertical */
+       
     }
 
     /* Alternar orden imagen / texto */
@@ -138,9 +186,82 @@
       direction: ltr;
     }
 
+    .split-media {
+      width: 100%;
+      height: 400px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 8px; /* opcional */
+    }
+
+    .split--ceremonia .split-media {
+      background-image: url('../images/iglesia.jpg');
+      
+    }
+
+    .split--celebracion .split-media {
+      background-image: url('../images/hacienda.jpg');
+    }
+
+
+
     .media-placeholder { height: 400px; background: #ccc; }
 
-    .cta { text-align: center; background: var(--bg-accent); padding: 6rem 2rem; }
+    .cta {
+      text-align: center;
+      padding: 6rem 2rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      color: var(--text-light);
+    }
+
+    /* Imagen de fondo con overlay */
+    .cta.cta--fondo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      
+      background:
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('../images/cta-fondo.jpg') center / cover no-repeat;
+      
+      z-index: 0;
+    }
+
+    /* Contenido por encima */
+    .cta.cta--fondo > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Estilos del texto y botón */
+    .cta .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    .cta .btn-light {
+      background: var(--text-light);
+      color: var(--bg-dark);
+      padding: 0.8rem 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.85rem;
+    }
+
 
     .site-footer {
       background: var(--bg-dark);
@@ -200,10 +321,22 @@
       .hero--home {
         aspect-ratio: 9 / 16;
         min-height: unset;
-        height: auto;
+      }
 
+      .hero--home::before {
         background:
           linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
           url('../images/hero.jpg') center / contain no-repeat;
+      }
+
+      .hero--rsvp {
+        aspect-ratio: 9 / 16;
+        min-height: unset;
+      }
+
+      .hero--rsvp::before {
+        background:
+          linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+          url('../images/playa.jpg') center / contain no-repeat;
       }
     }
