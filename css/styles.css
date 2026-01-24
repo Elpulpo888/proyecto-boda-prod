@@ -365,12 +365,12 @@
           url('../images/playa.jpg') center / contain no-repeat;
       }
 
-      .hero--rsvp {
+      .hero--vestimenta {
         aspect-ratio: 9 / 16;
         min-height: unset;
       }
 
-      .hero--rsvp::before {
+      .hero--vestimenta::before {
         background:
           linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
           url('../images/anillo.png') center / contain no-repeat;
