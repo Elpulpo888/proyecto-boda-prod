@@ -14,9 +14,7 @@ export default async function handler(req, res) {
     attendance,
     nameparner,
     restriccionalimentaria,
-    preguntascomentarios,
-    guests,
-    message
+    preguntascomentarios
   } = req.body;
 
   // Validaciones básicas
@@ -30,10 +28,8 @@ export default async function handler(req, res) {
     number,
     attendance,
     nameparner,
-    restriccionalimentaria,
-    preguntascomentarios,
-    guests,
-    message: message || '',
+    restriccionalimentaria: restriccionalimentaria || '',
+    preguntascomentarios: preguntascomentarios || '',
     ip: req.headers['x-forwarded-for'] || 'unknown'
   };
 
