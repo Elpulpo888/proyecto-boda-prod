@@ -13,20 +13,27 @@ export default async function handler(req, res) {
     email,
     attendance,
     guests,
-    message,
-    submitted_at
+    message
   } = req.body;
 
-  // Validaciones básicas
   if (!name || !email || !attendance || !guests) {
     return res.status(400).json({ message: 'Datos incompletos' });
   }
 
-  // Aquí luego:
-  // 1. Contaremos respuestas
-  // 2. Guardaremos en Google Sheets
+  const payload = {
+    name,
+    email,
+    attendance,
+    guests,
+    message,
+    ip: req.headers['x-forwarded-for'] || 'unknown'
+  };
 
-  return res.status(200).json({
-    message: 'Confirmación recibida'
+  await fetch('https://script.google.com/a/macros/unal.edu.co/s/AKfycbzrrFlPMxwb4mbFuLHm-th26xVMsqW_m-QqLuUg2A_WkdGFosZNA9Fr3ITY6x7CxwRR/exec', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
   });
+
+  return res.status(200).json({ message: 'Confirmación recibida' });
 }
