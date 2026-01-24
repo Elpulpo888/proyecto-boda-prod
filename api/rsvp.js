@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      'https://script.google.com/a/macros/unal.edu.co/s/AKfycbzrrFlPMxwb4mbFuLHm-th26xVMsqW_m-QqLuUg2A_WkdGFosZNA9Fr3ITY6x7CxwRR/exec',
+      'https://script.google.com/macros/s/AKfycbzc8zSAjc9IZ6MiQUmy-4aqCWfHnOPm_cCFUQlN8IJgX_1VE_NcfbexXwl5KuQhEeLC/exec',
       {
         method: 'POST',
         headers: {
