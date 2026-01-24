@@ -53,13 +53,13 @@
         <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none;">
 
         <div style="margin-top: 2rem; text-align: left;">
-          <label>Nombre completo</label>
+          <label>Nombre completo <span class="required">(obligatorio)</span> </label>
           <input type="text" name="name" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
         </div>
 
         <div style="margin-top: 1.5rem; text-align: left;">
-          <label>Correo electrónico</label>
-          <input type="email" name="email" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
+          <label>Número de teléfono <span class="required">(obligatorio)</span></label>
+          <input type="number" name="number" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
         </div>
 
         <div style="margin-top: 1.5rem; text-align: left;">
@@ -71,19 +71,19 @@
           </select>
         </div>
 
-        <div style="margin-top: 1.5rem; text-align: left;">
-          <label>Número de asistentes</label>
-          <select name="guests" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
+        <div style="margin-top: 2rem; text-align: left;">
+          <label>Nombre de acompañante <span class="required">(Solo si te extendimos dos invitaciones)</span> </label>
+          <input type="text" name="nameparner" style="width:100%; padding:0.7rem; margin-top:0.4rem;">
         </div>
 
         <div style="margin-top: 1.5rem; text-align: left;">
-          <label>Mensaje (opcional)</label>
-          <textarea name="message" rows="4" style="width:100%; padding:0.7rem; margin-top:0.4rem;"></textarea>
+          <label>¿Tienes alguna restriccion alimentaria ?(opcional)</label>
+          <textarea name="restriccionalimentaria" rows="3" style="width:100%; padding:0.7rem; margin-top:0.4rem;"></textarea>
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: left;">
+          <label>Preguntas o comentarios </label>
+          <textarea name="preguntascomentarios" rows="3" style="width:100%; padding:0.7rem; margin-top:0.4rem;"></textarea>
         </div>
 
         <button type="submit" class="btn-dark" style="margin-top:2.5rem; width:100%;">

@@ -290,6 +290,14 @@
       opacity: 1;
     }
 
+
+    .required {
+    color: rgb(98, 80, 80);        /* opcional, resalta que es obligatorio */
+    font-size: 0.85rem;
+    margin-left: 0.3rem; /* pequeño espacio desde el label */
+  }
+
+
     /* =====================
        RESPONSIVE (MÓVIL)
     ====================== */
