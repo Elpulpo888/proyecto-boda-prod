@@ -10,8 +10,11 @@ export default async function handler(req, res) {
 
   const {
     name,
-    email,
+    number,
     attendance,
+    nameparner,
+    restriccionalimentaria,
+    preguntascomentarios,
     guests,
     message
   } = req.body;
@@ -24,8 +27,11 @@ export default async function handler(req, res) {
   // Payload para Google Sheets
   const payload = {
     name,
-    email,
+    number,
     attendance,
+    nameparner,
+    restriccionalimentaria,
+    preguntascomentarios,
     guests,
     message: message || '',
     ip: req.headers['x-forwarded-for'] || 'unknown'
