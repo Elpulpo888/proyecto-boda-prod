@@ -15,24 +15,8 @@
 
 <body>
 
-  <header class="site-header">
-    <div class="hamburger" onclick="document.querySelector('.nav-left').classList.toggle('active')">
-      <span></span><span></span><span></span>
-    </div>
 
-    <nav class="nav-left">
-      <a href="index.html">Inicio</a>
-      <a href="codigo-vestimenta.html">Código de Vestimenta</a>
-      <a href="regalos.html">Regalos</a>
-      <a href="rsvp.html" class="btn-dark mobile-cta">Confirmar asistencia</a>
-    </nav>
-
-    <div class="nav-center">Celebrando nuestro amor</div>
-
-    <div class="nav-right">
-      <a href="rsvp.html" class="btn-dark">Confirmar asistencia</a>
-    </div>
-  </header>
+  <header id="header"></header>
 
   <section class="hero hero--home">
     <p class="eyebrow">¡Nos casamos!</p>
@@ -48,7 +32,7 @@
       <h2>Ceremonia</h2>
       <p>4:00 PM</p>
       <p>Parroquia Sagrado Corazón de Jesús</p>
-      <p>Los Salados, Retiro - Antioquia</p>
+      <p>Los Salados, El Retiro - Antioquia</p>
       <a href="https://maps.app.goo.gl/ar8x31HujH5ooVcg8" class="link">Ver mapa</a>
     </div>
   </section>
@@ -56,7 +40,8 @@
   <section class="split-section reverse split--celebracion">
     <div class="split-media"></div>
     <div class="content">
-      <h2>¡Sorpresa!</h2>
+      <h2>Celebración:</h2>
+      <p>¡Lugar sorpresa!</p>
       <p>A 30 minutos de la iglesia</p>
       <p>La ceja - Antioquia</p>
     </div>
@@ -70,14 +55,9 @@
   </section>
 
 
-  <footer class="site-footer">
-    <nav>
-      <a href="index.html">Ceremonia y Celebración</a>
-      <a href="codigo-vestimenta.html">Código de Vestimenta</a>
-      <a href="regalos.html">Regalos</a>
-      <a href="rsvp.html">Confirmar asistencia</a>
-    </nav>
-  </footer>
+  <div id="footer"></div>
+
+  <script src="js/include.js"></script>
 
 </body>
 </html>
