@@ -22,6 +22,26 @@
     <p class="eyebrow">¡Nos casamos!</p>
     <h1>Mariana y Felipe</h1>
     <p class="date">Mayo · 17 · 26</p>
+
+    <!-- CONTADOR -->
+    <div class="countdown" id="countdown">
+      <div>
+        <span id="days">00</span>
+        <small>Días</small>
+      </div>
+      <div>
+        <span id="hours">00</span>
+        <small>Horas</small>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <small>Min</small>
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        <small>Seg</small>
+      </div>
+    </div>
   </section>
 
   
@@ -58,6 +78,31 @@
   <div id="footer"></div>
 
   <script src="js/include.js"></script>
+
+  <script>
+  const targetDate = new Date("May 17, 2026 16:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) return;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
 
 </body>
 </html>
