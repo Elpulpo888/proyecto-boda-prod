@@ -201,7 +201,9 @@
     .hero--vestimenta {
       min-height: 90vh;
       padding: 2rem;
+      font-family: 'Cormorant Garamond', sans-serif;
     }
+
 
     .hero--vestimenta::before {
       content: "";
@@ -217,10 +219,8 @@
     }
 
 
-    .hero--vestimenta > * {
-      position: relative;
-      z-index: 1;
-    }
+  
+    
 
     /* HERO-regalos*/
 
@@ -284,6 +284,30 @@
       background-repeat: no-repeat;
       border-radius: 8px; /* opcional */
     }
+
+    .split--vestimenta {
+      gap: 2rem;
+    }
+
+    .vestimenta {
+      padding: 3rem 2rem;
+      border-radius: 1.1rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      font-family: 'Cormorant Garamond', sans-serif;
+      font-size: 1.2rem;
+    }
+
+    /* Rosa pastel */
+    .vestimenta--mujer {
+      background-color: #ebccad;
+    }
+
+    /* Azul pastel */
+    .vestimenta--hombre {
+      background-color: #99ab9f;
+    }
+
 
     .split--ceremonia .split-media {
       background-image: url('../images/iglesia.jpg');
