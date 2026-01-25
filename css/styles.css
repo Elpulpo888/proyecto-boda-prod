@@ -28,6 +28,17 @@
 
     a { text-decoration: none; color: inherit; }
 
+    p a {
+      text-decoration: underline;
+      font-size: 1.1em;
+    }
+
+    footer a {
+      text-decoration: underline;
+      font-size: 1.1em;
+    }
+
+
     /* =====================
        HEADER (DESKTOP)
     ====================== */
@@ -139,6 +150,27 @@
       z-index: 1;
     }
 
+    .countdown {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .countdown span {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+    }
+
+    .countdown small {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+
     /* HERO-RESVP*/
 
     .hero--rsvp {
@@ -186,6 +218,32 @@
 
 
     .hero--vestimenta > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HERO-regalos*/
+
+    .hero--regalos {
+      min-height: 90vh;
+      padding: 2rem;
+    }
+
+    .hero--regalos::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('../images/sobres-desktop.png') center / cover no-repeat;
+
+      z-index: 0;
+      margin: 0 0 1rem 0;
+    }
+
+
+    .hero--regalos > * {
       position: relative;
       z-index: 1;
     }
@@ -391,9 +449,10 @@
         min-height: unset;
       }
 
+
       .hero--rsvp::before {
         background:
-          linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+          linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
           url('../images/playa.jpg') center / contain no-repeat;
       }
 
