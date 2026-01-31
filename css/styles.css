@@ -509,9 +509,11 @@
         background:
           linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
           url('../images/cta-fondo.jpg') center / cover no-repeat;
-          justify-content: flex-end; /* 👈 magia */
-          padding-bottom: 4rem;   
+          
       }
 
-
+      .cta.cta--fondo {
+        justify-content: flex-end; /* 👈 ESTO mueve el h2 y el botón */
+        padding-bottom: 4rem;      /* ajusta cuánto sube/baja */
+      }
     }
