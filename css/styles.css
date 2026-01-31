@@ -26,9 +26,14 @@
       line-height: 1.6;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a {color: inherit; }
 
     p a {
+      text-decoration: underline;
+      font-size: 1.1em;
+    }
+
+    #mapa {
       text-decoration: underline;
       font-size: 1.1em;
     }
@@ -428,6 +433,13 @@
     margin-left: 0.3rem; /* pequeño espacio desde el label */
   }
 
+    #mapa {
+      text-decoration: underline !important;
+    }
+
+    .link{
+      text-decoration: underline;
+    }
 
     /* =====================
        RESPONSIVE (MÓVIL)

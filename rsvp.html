@@ -28,7 +28,7 @@
   <section class="split-section" style="grid-template-columns: 1fr; justify-items: center;">
     <div class="content" style="max-width: 500px; margin: 0 auto; text-align: center;">
       <h2>Formulario de confirmación de asistencia</h2>
-      <p>Por favor confirma tu asistencia antes de la fecha indicada.</p>
+      <p>Por favor confirma tu asistencia antes de el 2 de Marzo.</p>
 
       <form id="rsvp-form" method="POST" action="/api/rsvp">
 
@@ -47,7 +47,7 @@
         </div>
 
         <div style="margin-top: 1.5rem; text-align: left;">
-          <label>¿Asistirás a la boda?</label>
+          <label>¿Asistirás a la boda?<span class="required">(obligatorio)</span></label>
           <select name="attendance" required style="width:100%; padding:0.7rem; margin-top:0.4rem;">
             <option value="">Selecciona una opción</option>
             <option value="si">Sí, asistiré</option>
