@@ -448,6 +448,8 @@
       .mobile-cta { display: inline-block; }
       .hamburger { display: flex; }
 
+      
+
       .nav-right { display: none; }
 
       .nav-left {
@@ -507,5 +509,10 @@
         background:
           linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
           url('../images/cta-fondo.jpg') center / cover no-repeat;
+      }
+
+      .cta h2,
+      .cta a {
+        margin-top: 2rem; /* ajusta: 2rem, 4rem, lo que te guste */
       }
     }
