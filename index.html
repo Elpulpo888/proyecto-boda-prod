@@ -15,7 +15,37 @@
 </head>
 
 <body>
+  <body>
 
+  
+  <div id="popup" class="overlay">
+    <div class="modal">
+      <h2>✨ Cambio de ubicación ✨</h2>
+      <p class="mensaje">
+        Con mucho amor queremos contarles que la ceremonia de nuestra boda
+        se celebrará en una nueva iglesia.
+      </p>
+
+      <p class="lugar">
+        <strong>Nueva iglesia:</strong><br>
+        Iglesia [Nombre aquí]
+      </p>
+
+      <a 
+        href="https://maps.google.com/?q=TU_UBICACION" 
+        target="_blank" 
+        class="btn-maps"
+      >
+        📍 Ver ubicación
+      </a>
+
+      <button onclick="cerrarPopup()" class="btn-cerrar">
+        Entendido 💕
+      </button>
+    </div>
+  </div>
+
+ 
 
   <header id="header"></header>
 
@@ -101,6 +131,18 @@
 
   updateCountdown();
   setInterval(updateCountdown, 1000);
+
+  function cerrarPopup() {
+    document.getElementById("popup").style.display = "none";
+    localStorage.setItem("avisoIglesia", "true");
+  }
+
+  window.onload = function() {
+    const visto = localStorage.getItem("avisoIglesia");
+    if (visto) {
+      document.getElementById("popup").style.display = "none";
+    }
+  };
 </script>
 
 
