@@ -440,70 +440,100 @@
     #mapa {
       text-decoration: underline;
     }
-
-    /* POPUP BODA */
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(26, 26, 26, 0.6); /* usa bg-dark */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
+/* Modal tipo invitación */
 .modal {
-  background: #fffaf7;
-  padding: 30px;
+  background: var(--bg-main);
+  padding: 35px 25px;
   border-radius: 20px;
   text-align: center;
-  max-width: 380px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
   animation: fadeInScale 0.5s ease;
   font-family: 'Georgia', serif;
+  border: 1px solid var(--bg-accent);
 }
 
+/* Título */
 .modal h2 {
-  color: #b76e79;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
+/* Texto */
 .mensaje {
-  color: #555;
+  font-size: 15px;
+  color: var(--text-muted);
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .lugar {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: var(--text-main);
 }
 
+/* Botón Maps */
 .btn-maps {
   display: inline-block;
   margin-bottom: 15px;
-  padding: 10px 15px;
-  background: #b76e79;
-  color: white;
-  border-radius: 25px;
+  padding: 10px 18px;
+  background: var(--bg-accent);
+  color: var(--text-main);
+  border-radius: 30px;
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
+.btn-maps:hover {
+  background: var(--text-main);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+/* Botón cerrar */
 .btn-cerrar {
+  display: block;
+  margin: auto;
+  padding: 8px 15px;
   border: none;
   background: transparent;
-  color: #b76e79;
+  color: var(--text-muted);
+  font-size: 14px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
+.btn-cerrar:hover {
+  color: var(--text-main);
+}
+
+/* Animación elegante */
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.85);
+    transform: scale(0.85) translateY(20px);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
 }
 

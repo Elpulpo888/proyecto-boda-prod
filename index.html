@@ -28,11 +28,11 @@
 
       <p class="lugar">
         <strong>Nueva iglesia:</strong><br>
-        Iglesia [Nombre aquí]
+         Capilla Ermita De La Candelaria
       </p>
 
       <a 
-        href="https://maps.google.com/?q=TU_UBICACION" 
+        href="https://share.google/TfC5RjnaiZRF0TOMP" 
         target="_blank" 
         class="btn-maps"
       >
@@ -132,16 +132,13 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
+
   function cerrarPopup() {
     document.getElementById("popup").style.display = "none";
-    localStorage.setItem("avisoIglesia", "true");
   }
 
   window.onload = function() {
-    const visto = localStorage.getItem("avisoIglesia");
-    if (visto) {
-      document.getElementById("popup").style.display = "none";
-    }
+    document.getElementById("popup").style.display = "flex";
   };
 </script>
 
