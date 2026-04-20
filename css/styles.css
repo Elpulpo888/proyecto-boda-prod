@@ -475,7 +475,7 @@
   letter-spacing: 1px;
   font-size: clamp(18px, 4vw, 26px);
   text-align: center;
-  
+  white-space: nowrap;
 }
 
 /* Texto */
@@ -484,7 +484,6 @@
   color: var(--text-muted);
   margin-bottom: 20px;
   line-height: 1.5;
-  white-space: nowrap;
 }
 
 .lugar {
